@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number adding </title>
+</head>
+
+<body>
+    <main>
+
+
+        <form method="get">
+            <div> <label for="first">Enter 1st number : <input type="number" id="first" pattern="[0-9]"></label></div>
+            <div><label for="second">Enter 2nd number : <input type="number" id="second" pattern="[0-9]"></label></div>
+            <br>
+            <div> <button type="button" onclick="getInputValue();">show the ans below</button></div>
+        </form>
+        <br>
+        <div class="output">
+            <label for="result">The result is : <input type="number" id="ans"></label>
+        </div>
+
+    </main>
+
+    <!-- js scripts are start here  -->
+    <script>
+
+       
+        function getInputValue() {
+            
+            var firstNumber = document.getElementById("first").value;
+            var secondNumber = document.getElementById("second").value;
+
+            var sum = parseFloat(firstNumber) + parseFloat(secondNumber);
+            document.getElementById("ans").value = sum;
+            document.getElementById("result").innerHTML = sum;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
